@@ -1,21 +1,14 @@
 import React from "react";
 import profilePicture from "./lafouaa.jpg";
-import {
-  Avatar,
-  Container,
-  Grid,
-  Link,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Avatar, Grid, Link, Stack, Typography } from "@mui/material";
 
 const Biography = () => (
   <Stack spacing={2}>
-    <Typography variant="h3" gutterBottom>
+    <Typography variant="h4" gutterBottom>
       Bonjour 👋
     </Typography>
     <Typography variant="body1">
-      I&apos;m Antoine, and I&apos;m a Paris 🇫🇷-based software engineer with 8
+      I&apos;m Antoine, and I&apos;m a Paris🇫🇷-based software engineer with 8
       years of experience. I have been a senior software engineer leading the
       Shipping &amp; Logistics team at{" "}
       <Link href="https://www.backmarket.com">Back Market</Link> for 4 years.
@@ -37,21 +30,19 @@ const Biography = () => (
   </Stack>
 );
 
-export default function Home() {
+export default function Bio() {
   return (
-    <Container maxWidth="md">
-      <Grid container spacing={2}>
-        <Grid item md={3}>
-          <Avatar
-            src={profilePicture}
-            alt="Antoine profile picture"
-            sx={{ width: 160, height: 160 }}
-          />
-        </Grid>
-        <Grid item md={9}>
-          <Biography />
-        </Grid>
+    <Grid container spacing={2}>
+      <Grid item md={3}>
+        <Avatar
+          src={profilePicture}
+          alt="Antoine profile picture"
+          sx={{ width: 160, height: 160 }}
+        />
       </Grid>
-    </Container>
+      <Grid item md={9}>
+        <Biography />
+      </Grid>
+    </Grid>
   );
 }

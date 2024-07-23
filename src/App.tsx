@@ -1,13 +1,18 @@
 import React from "react";
-import { CssBaseline } from "@mui/material";
 import "./App.css";
-import Home from "./pages/Home";
+import Bio from "./sections/Bio";
+import { Container, Stack } from "@mui/material";
+import WorkExperience from "./sections/WorkExperience";
 
 function App() {
   return (
     <>
-      <CssBaseline />
-      <Home />
+      <Container maxWidth="md">
+        <Stack spacing={16}>
+          <Bio />
+          <WorkExperience />
+        </Stack>
+      </Container>
     </>
   );
 }
